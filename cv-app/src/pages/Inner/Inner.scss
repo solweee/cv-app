@@ -1,6 +1,6 @@
+@import "../../assets/styles/variables";
 
 .inner-page {
-  
   .main-content {
     margin-left: 250px;
     transition: all 0.5s;
@@ -9,11 +9,10 @@
     margin-left: 0;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $breakpoint-width) {
   .inner-page {
     .main-content {
-        margin-left: 55px;
-      }
-      
+      margin-left: 55px;
+    }
   }
 }

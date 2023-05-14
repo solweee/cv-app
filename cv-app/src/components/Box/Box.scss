@@ -1,12 +1,13 @@
+@import "../../assets/styles/variables";
 .info-box {
-  max-width: 1030px;
+  max-width: $max-width;
   margin: 0 auto;
-  padding: 40px 30px 10px;
-  color: #222935;
+  padding: $container-padding;
+  color: $color-main-bg;
   box-sizing: border-box;
 
   .info-box__title {
-    color: #26c17e;
+    color: $color-highlights;
     font-size: 25px;
     padding-bottom: 40px;
 
@@ -14,5 +15,4 @@
       display: none;
     }
   }
-
 }

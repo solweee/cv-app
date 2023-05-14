@@ -1,12 +1,13 @@
 import { Panel } from "../../components/Panel/Panel";
 import { Box } from "../../components/Box/Box";
 import { TimeLine } from "../../components/TimeLine/TimeLine";
-import "./Inner.scss";
 import { Experience } from "../../components/Experience/Experience";
 import { Portfolio } from "../../components/Portfolio/Portfolio";
 import { Address } from "../../components/Address/Address";
 import { Feedback } from "../../components/Feedback/Feedback";
 import image from "../../assets/images/feedback-img.jpg";
+import { ToTopBtn } from "../../components/ToTopBtn/ToTopBtn";
+import "./Inner.scss";
 
 export function Inner() {
   return (
@@ -106,9 +107,28 @@ export function Inner() {
                   citeUrl: "somesite.com",
                 },
               },
+              {
+                feedback:
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
+                reporter: {
+                  photoUrl: image,
+                  name: "Martin Friman Programmer",
+                  citeUrl: "somesite.com",
+                },
+              },
+              {
+                feedback:
+                  "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.",
+                reporter: {
+                  photoUrl: image,
+                  name: "Martin Friman Programmer",
+                  citeUrl: "somesite.com",
+                },
+              },
             ]}
           />
         </Box>
+        <ToTopBtn />
       </main>
     </div>
   );

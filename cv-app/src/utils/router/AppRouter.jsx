@@ -5,10 +5,8 @@ import { Inner } from "../../pages/Inner/Inner";
 export function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route exact path="/inner" element={<Inner />}>
-        <Route/>
-      </Route>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/inner" element={<Inner />}/>
     </Routes>
   );
 }

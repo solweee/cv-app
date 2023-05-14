@@ -1,5 +1,5 @@
-import "./Feedback.scss";
 import { Info } from "../Info/Info";
+import "./Feedback.scss";
 
 export function Feedback(props) {
   const { data } = props;

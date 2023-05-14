@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -11,14 +13,14 @@
       display: flex;
       gap: 20px;
       align-items: center;
-      color: #667081;
+      color: $color-navbars;
       text-decoration: none;
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
       &:hover,
       &.active {
-        color: #26c17e;
+        color: $color-highlights;
         font-weight: 600;
       }
 

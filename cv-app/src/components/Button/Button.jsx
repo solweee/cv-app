@@ -1,12 +1,12 @@
-import "./Button.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Button.scss";
 
 export function Button(props) {
-  const { icon, text, clickAction } = props;
+  const { text, clickAction } = props;
+
   return (
     <button onClick={clickAction} className="button">
-      <FontAwesomeIcon className="btn-icon" icon={icon}/>
-      <span>{text}</span>
+      {props.children}
+      <span className="btn-text">{text}</span>
     </button>
   );
 }

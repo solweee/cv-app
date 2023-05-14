@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .home {
   position: fixed;
   height: 100%;
@@ -11,7 +13,7 @@
   .info-box {
     
     .photo-box {
-      color: #ffffff;
+      color: $color-secondary-text;
       img {
         width: 165px;
         height: 165px;

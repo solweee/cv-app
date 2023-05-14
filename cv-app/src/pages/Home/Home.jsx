@@ -1,9 +1,9 @@
 import { Button } from "../../components/Button/Button";
 import { PhotoBox } from "../../components/ProtoBox/PhotoBox";
 import avatar from "../../assets/images/avatar.a087a561.png";
-import "./Home.scss";
 import { Box } from "../../components/Box/Box";
 import { useNavigate } from "react-router-dom";
+import "./Home.scss";
 
 export function Home() {
   const navigate = useNavigate();

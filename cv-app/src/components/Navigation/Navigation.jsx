@@ -51,8 +51,7 @@ export function Navigation() {
           <li key={item.name}>
             <Link
               activeClass="active"
-              className="nav-link"
-              smooth
+              smooth 
               spy
               to={item.name}
             >

@@ -1,11 +1,12 @@
 import { PhotoBox } from "../ProtoBox/PhotoBox";
 import { Navigation } from "../Navigation/Navigation";
 import { Button } from "../Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faBars } from "@fortawesome/free-solid-svg-icons";
-import "./Panel.scss";
 import { NavButton } from "../NavButton/NavButton";
 import avatar from "../../assets/images/avatar.a087a561.png";
 import { useNavigate } from "react-router-dom";
+import "./Panel.scss";
 
 export function Panel() {
   const navigate = useNavigate();
@@ -18,11 +19,9 @@ export function Panel() {
       <div className="panel-side">
         <PhotoBox name="John Doe" avatar={avatar} />
         <Navigation />
-        <Button
-          clickAction={() => navigate("/")}
-          text="Go back"
-          icon={faAngleLeft}
-        />
+        <Button clickAction={() => navigate("/")} text="Go back">
+          <FontAwesomeIcon icon={faAngleLeft} />
+        </Button>
       </div>
     </header>
   );

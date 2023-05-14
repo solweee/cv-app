@@ -1,0 +1,20 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+$general-font: normal 400 14px "Open Sans", sans-serif;
+
+//colors
+$color-main-text: #000614;
+$color-secondary-text: #ffffff;
+$color-main-bg: #222935;
+$color-secondary-bg: #eeeeee;
+$color-highlights: #26C17E;
+$color-navbars: #667081;
+$color-border: #dddddd;
+
+
+//box container
+$max-width: 1030px;
+$container-padding:  40px 30px 10px;
+
+//media queries
+$breakpoint-width: 600px;

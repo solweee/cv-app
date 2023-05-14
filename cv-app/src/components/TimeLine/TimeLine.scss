@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .timeline {
   min-height: 30vh;
   max-height: 80vh;
@@ -8,7 +10,7 @@
     padding: 0 15px;
 
     &:before {
-      background: #26c17e;
+      background: $color-highlights;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -28,7 +30,7 @@
         font-size: 16px;
         line-height: 120%;
         padding: 15px;
-        background: #ffffff;
+        background: $color-secondary-text;
         position: relative;
         left: -15px;
       }
@@ -44,11 +46,11 @@
           height: 0;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
-          border-right: 10px solid #eee;
+          border-right: 10px solid $color-secondary-bg;
         }
 
         .info {
-          background: #eee;
+          background: $color-secondary-bg;
           padding: 15px;
 
           h3{

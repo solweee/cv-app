@@ -1,14 +1,15 @@
+@import "../../assets/styles/variables";
 .button {
   border-radius: 5px;
   height: 40px;
-  color: #ffffff;
-  background: #222935;
+  color: $color-secondary-text;
+  background: $color-main-bg;
   border: none;
   margin: 0 auto;
   padding: 0 20px;
 
   &:hover {
-    background: #26c17e;
+    background: $color-highlights;
   }
 
   .btn-icon {
@@ -17,8 +18,8 @@
       display: none;
     }
   }
-  span {
-    font: 14px "Open Sans", sans-serif;
+  .btn-text {
+    font: $general-font;
     white-space: nowrap;
   }
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./Portfolio.scss";
 import img_code from "../../assets/images/card_1.b1844ee5.jpg";
 import img_ui from "../../assets/images/card_3.608e2b77.png";
 import { useIsotopeLayout } from "../../utils/hooks/useIsotopeLayout";
+import "./Portfolio.scss";
 
 export function Portfolio() {
   const [filterKey, setFilterKey] = useState("*");

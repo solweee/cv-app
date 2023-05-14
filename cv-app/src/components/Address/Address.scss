@@ -1,3 +1,4 @@
+@import "../../assets/styles/variables";
 .address {
   font-style: normal;
   display: flex;
@@ -9,7 +10,7 @@
     font-size: 16px;
 
     dt {
-      color: #26c17e;
+      color: $color-highlights;
       font-size: 26px;
       min-width: 50px;
     }
@@ -23,10 +24,10 @@
         font-weight: 700;
       }
       a {
-        color: #667081;
+        color: $color-navbars;
         text-decoration: none;
         strong {
-          color: #222935;
+          color: $color-main-bg;
         }
       }
     }

@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .portfolio {
   .tabs {
     font-size: 16px;
@@ -24,12 +26,12 @@
       & span {
         cursor: pointer;
         &:hover{
-          color: #26c17e;
+          color: $color-highlights;
         }
       }
       &.active {
         span {
-          color: #26c17e;
+          color: $color-highlights;
         }
       }
     }
@@ -60,20 +62,20 @@
         position: absolute;
         left: 0;
         padding: 20px 15px;
-        background: #ffffff;
-        border: 1px solid #dddddd;
+        background: $color-secondary-text;
+        border: 1px solid $color-border;
         box-sizing: border-box;
         top: 100%;
         transition: all 0.5s ease;
 
         h2{
-          color: #26c17e;
+          color: $color-highlights;
         }
         p {
           margin: 10px 0;
         }
         a {
-          color: #26c17e;
+          color: $color-highlights;
           text-decoration: underline;
         }
       }

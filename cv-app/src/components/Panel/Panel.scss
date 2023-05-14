@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .panel {
   position: fixed;
   height: 100%;
@@ -10,12 +12,9 @@
     top: 20px;
     left: 250px;
     transition: 0.5s;
-    &:hover{
-      color: #26c17e;
-    }
   }
   .panel-side {
-    background: #222935;
+    background: $color-main-bg;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,13 +24,19 @@
     box-sizing: border-box;
     padding: 20px 0;
     transition: all 0.5s;
+
+    .button{
+      .btn-text{
+        padding-left: 5px;
+      }
+    }
   }
 
   &.hidden {
     transform: translateX(-250px);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $breakpoint-width) {
   .panel {
     width: 55px;
 
@@ -60,7 +65,7 @@
       .button {
         height: 30px;
         padding: 0 15px;
-        background: #26c17e;
+        background: $color-highlights;
 
         span {
           display: none;
