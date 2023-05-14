@@ -1,0 +1,24 @@
+.experience-list {
+  
+  li {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    .experience-list-date {
+      min-width: 90px;
+      h3 {
+        padding-bottom: 5px;
+      }
+      span {
+        color: #667081;
+      }
+    }
+    .experience-list-info {
+      h3 {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

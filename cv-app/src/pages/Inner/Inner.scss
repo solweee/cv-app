@@ -1,0 +1,19 @@
+
+.inner-page {
+  
+  .main-content {
+    margin-left: 250px;
+    transition: all 0.5s;
+  }
+  .panel.hidden ~ .main-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .inner-page {
+    .main-content {
+        margin-left: 55px;
+      }
+      
+  }
+}

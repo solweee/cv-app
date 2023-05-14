@@ -1,0 +1,26 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  li {
+    blockquote {
+      .feedback-reporter {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        .feedback-reporter-photo {
+          width: 50px;
+          height: 50px;
+          padding-right: 20px;
+        }
+        cite {
+          font-style: normal;
+          a {
+            text-decoration: none;
+            color: #26c17e;
+          }
+        }
+      }
+    }
+  }
+}

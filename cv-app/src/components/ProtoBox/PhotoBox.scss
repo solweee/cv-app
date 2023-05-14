@@ -1,0 +1,16 @@
+.photo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+  h2 {
+    color: #ffffff;
+    padding-top: 10px;
+  }
+}
