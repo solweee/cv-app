@@ -9,7 +9,7 @@ export function ToTopBtn() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > document.querySelector("#about").offsetHeight) {
+      if (document.querySelector("#about") && window.scrollY > document.querySelector("#about").offsetHeight) {
         setShowScrollTopButton(true);
       } else {
         setShowScrollTopButton(false);

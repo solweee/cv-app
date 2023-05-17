@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables";
+
+.loading-panel {
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  .icon {
+    color: $color-highlights;
+    font-size: 25px;
+    animation: loading 3s linear infinite;
+
+    @keyframes loading {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

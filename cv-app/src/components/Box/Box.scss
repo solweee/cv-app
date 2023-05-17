@@ -5,6 +5,7 @@
   padding: $container-padding;
   color: $color-main-bg;
   box-sizing: border-box;
+  position: relative;
 
   .info-box__title {
     color: $color-highlights;
