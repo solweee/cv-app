@@ -15,15 +15,15 @@ import "./Inner.scss";
 export function Inner() {
   const [activeBox, setActiveBox] = useState(null);
   const sectionRefs = useRef({});
-
+  
+  const handleIntersection = function (entries) {
+    entries.forEach((entry) => {
+      if (entry.target.id !== activeBox && entry.isIntersecting) {
+        setActiveBox(entry.target.id);
+      }
+    });
+  };
   useEffect(() => {
-    const handleIntersection = function (entries) {
-      entries.forEach((entry) => {
-        if (entry.target.id !== activeBox && entry.isIntersecting) {
-          setActiveBox(entry.target.id);
-        }
-      });
-    };
     const sections = Object.values(
       document.getElementsByClassName("container-box")
     ).map((item) => item.id);
@@ -31,6 +31,7 @@ export function Inner() {
       root: null,
       threshold: 0.5,
     };
+    if (!window.IntersectionObserver) return;
     const observer = new IntersectionObserver(
       handleIntersection,
       observerOptions
@@ -39,7 +40,7 @@ export function Inner() {
       observer.observe(sectionRefs.current[id]);
     });
     return () => observer.disconnect();
-  }, [activeBox]);
+  }, []);
 
   const handleClick = (name) => {
     sectionRefs.current[name].scrollIntoView({
@@ -47,7 +48,7 @@ export function Inner() {
       block: "start",
     });
   };
-  
+
   return (
     <div className="inner-page">
       <Panel activeBox={activeBox} handleClick={handleClick} />

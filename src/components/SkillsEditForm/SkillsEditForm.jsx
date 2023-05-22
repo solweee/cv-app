@@ -73,6 +73,7 @@ export function SkillsEditForm() {
               <input
                 type="text"
                 name="skillRange"
+                id="skillRange"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.skillRange}

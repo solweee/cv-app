@@ -14,7 +14,7 @@ export function Panel({activeBox, handleClick}) {
     document.querySelector(".panel").classList.toggle("hidden");
   };
   return (
-    <header className="panel">
+    <header data-testid="panel" className="panel">
       <NavButton clickAction={handleToggle} icon={faBars} />
       <div className="panel-side">
         <PhotoBox name="John Doe" avatar={avatar} />

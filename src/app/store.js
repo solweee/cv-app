@@ -26,7 +26,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export const createReduxStore = () =>
+export const createReduxStore = (initialState) =>
   configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
@@ -35,6 +35,7 @@ export const createReduxStore = () =>
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
       }),
+      preloadedState: initialState,
   });
 export const store = createReduxStore();
 export const persistor = persistStore(store);

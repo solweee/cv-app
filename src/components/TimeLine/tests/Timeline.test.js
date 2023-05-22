@@ -1,10 +1,10 @@
 import { rest } from "msw";
 import { setupServer } from "msw/node";
-import { renderWithProviders } from "../../../utils/test-utils";
+import { renderWithProviders, renderWithRedux, renderWithRouter } from "../../../utils/test-utils";
 import { TimeLine } from "../TimeLine";
-import { waitFor } from "@testing-library/react";
-import { screen } from "@testing-library/react";
+import { waitFor, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { createReduxStore } from "../../../app/store";
 
 const server = setupServer(
   rest.get("/api/educations", (req, res, ctx) => {
@@ -27,7 +27,9 @@ describe("Timeline component", () => {
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
   test("data is fetched when page loads", async () => {
-    renderWithProviders(<TimeLine />);
+    const store = createReduxStore();
+    render(renderWithRedux(store, renderWithRouter(<TimeLine />, ["/"])));
+  
 
     await waitFor(() => {
       expect(screen.getByText("Timeline example")).toBeInTheDocument();
