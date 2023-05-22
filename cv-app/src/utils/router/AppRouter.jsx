@@ -7,6 +7,7 @@ export function AppRouter() {
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/inner" element={<Inner />} />
+      <Route path="/inner/:id" element={<Inner />} />
     </Routes>
   );
 }

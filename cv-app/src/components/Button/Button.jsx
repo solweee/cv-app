@@ -5,6 +5,7 @@ export function Button(props) {
 
   return (
     <button
+      data-testid="button"
       type={type}
       disabled={disabled}
       onClick={clickAction}

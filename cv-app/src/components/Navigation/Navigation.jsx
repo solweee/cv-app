@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -11,6 +11,13 @@ import { faGem, faComment } from "@fortawesome/free-regular-svg-icons";
 import "./Navigation.scss";
 
 export function Navigation() {
+  const onPress = (e, elementId) => {
+    e.preventDefault();
+    const target = window.document.getElementById(elementId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const menuItems = [
     {
       name: "about",
@@ -48,13 +55,12 @@ export function Navigation() {
     <nav>
       <ul className="navigation">
         {menuItems.map((item) => (
-          <li key={item.name}>
-            <Link
-              activeClass="active"
-              smooth 
-              spy
-              to={item.name}
-            >
+          <li
+            onClick={(e) => onPress(e, item.name)}
+            data-to-scrollspy-id={item.name}
+            key={item.name}
+          >
+            <Link to={`/inner/${item.name}`}>
               <FontAwesomeIcon
                 className="navigation-item__icon"
                 icon={item.icon}

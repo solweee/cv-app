@@ -9,6 +9,12 @@
   margin: 0;
 
   li {
+    &.active-scroll-spy {
+      a {
+        color: $color-highlights;
+        font-weight: 600;
+      }
+    }
     a {
       display: flex;
       gap: 20px;
@@ -18,8 +24,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
-      &:hover,
-      &.active {
+      &:hover,&.active {
         color: $color-highlights;
         font-weight: 600;
       }
