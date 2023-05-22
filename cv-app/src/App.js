@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { AppRouter } from "./utils/router/AppRouter";
 import { Provider } from "react-redux";
-import { store, persistor } from "./app/store";
+import { persistor, store } from "./app/store";
 import { PersistGate } from "redux-persist/integration/react";
 
 function App() {

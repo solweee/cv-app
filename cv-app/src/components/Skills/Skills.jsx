@@ -21,7 +21,10 @@ export function Skills() {
 
   return (
     <div className="skills">
-      <Button clickAction={handleClick} text="Open edit">
+      <Button
+        clickAction={handleClick}
+        text={!isVisible ? "Open edit" : "Close edit"}
+      >
         <FontAwesomeIcon icon={faPenToSquare} />
       </Button>
       {isVisible && <SkillsEditForm />}

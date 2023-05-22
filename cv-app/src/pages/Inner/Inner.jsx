@@ -9,37 +9,98 @@ import { Address } from "../../components/Address/Address";
 import { Feedback } from "../../components/Feedback/Feedback";
 import { experienceData, feedbackData } from "../../utils/appData/appData";
 import { Skills } from "../../components/Skills/Skills";
-import ScrollSpy from "react-ui-scrollspy";
+import { useRef, useState, useEffect } from "react";
 import "./Inner.scss";
 
 export function Inner() {
+  const [activeBox, setActiveBox] = useState(null);
+  const sectionRefs = useRef({});
+
+  useEffect(() => {
+    const handleIntersection = function (entries) {
+      entries.forEach((entry) => {
+        if (entry.target.id !== activeBox && entry.isIntersecting) {
+          setActiveBox(entry.target.id);
+        }
+      });
+    };
+    const sections = Object.values(
+      document.getElementsByClassName("container-box")
+    ).map((item) => item.id);
+    const observerOptions = {
+      root: null,
+      threshold: 0.5,
+    };
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+    sections.forEach((id) => {
+      observer.observe(sectionRefs.current[id]);
+    });
+    return () => observer.disconnect();
+  }, [activeBox]);
+
+  const handleClick = (name) => {
+    sectionRefs.current[name].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+  
   return (
     <div className="inner-page">
-      <Panel />
+      <Panel activeBox={activeBox} handleClick={handleClick} />
       <main className="main-content">
-        <ScrollSpy>
-          <Box id="about" title="About me">
-            <About />
-          </Box>
-          <Box id="education" title="Education">
-            <TimeLine />
-          </Box>
-          <Box id="experience" title="Experience">
-            <Experience data={experienceData} />
-          </Box>
-          <Box id="skills" title="Skills">
-            <Skills />
-          </Box>
-          <Box id="portfolio" title="Portfolio">
-            <Portfolio />
-          </Box>
-          <Box id="contacts" title="Contacts">
-            <Address />
-          </Box>
-          <Box id="feedback" title="Feedbacks">
-            <Feedback data={feedbackData} />
-          </Box>
-        </ScrollSpy>
+        <Box
+          ref={(el) => (sectionRefs.current["about"] = el)}
+          id="about"
+          title="About me"
+        >
+          <About />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["education"] = el)}
+          id="education"
+          title="Education"
+        >
+          <TimeLine />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["experience"] = el)}
+          id="experience"
+          title="Experience"
+        >
+          <Experience data={experienceData} />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["skills"] = el)}
+          id="skills"
+          title="Skills"
+        >
+          <Skills />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["portfolio"] = el)}
+          id="portfolio"
+          title="Portfolio"
+        >
+          <Portfolio />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["contacts"] = el)}
+          id="contacts"
+          title="Contacts"
+        >
+          <Address />
+        </Box>
+        <Box
+          ref={(el) => (sectionRefs.current["feedback"] = el)}
+          id="feedback"
+          title="Feedbacks"
+        >
+          <Feedback data={feedbackData} />
+        </Box>
         <ToTopBtn />
       </main>
     </div>

@@ -8,7 +8,7 @@ import avatar from "../../assets/images/avatar.a087a561.png";
 import { useNavigate } from "react-router-dom";
 import "./Panel.scss";
 
-export function Panel() {
+export function Panel({activeBox, handleClick}) {
   const navigate = useNavigate();
   const handleToggle = () => {
     document.querySelector(".panel").classList.toggle("hidden");
@@ -18,7 +18,7 @@ export function Panel() {
       <NavButton clickAction={handleToggle} icon={faBars} />
       <div className="panel-side">
         <PhotoBox name="John Doe" avatar={avatar} />
-        <Navigation />
+        <Navigation activeBox={activeBox} handleClick={handleClick} />
         <Button clickAction={() => navigate("/")} text="Go back">
           <FontAwesomeIcon icon={faAngleLeft} />
         </Button>

@@ -22,7 +22,7 @@ export function renderWithProviders(
 }
 
 export const renderWithRouter = (component, initialRoute = "/") => {
-  return render(
+  return (
     <MemoryRouter initialEntries={initialRoute}>
       <AppRouter />
       {component}
