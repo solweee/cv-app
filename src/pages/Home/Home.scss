@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables";
+
+.home {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 6, 20, 0.7), rgba(0, 6, 20, 0.7)),
+    url(../../assets/images/bg-image.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .container-box {
+    
+    .photo-box {
+      color: $color-secondary-text;
+      img {
+        width: 165px;
+        height: 165px;
+      }
+      h2 {
+        font-size: 45px;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 25px;
+        padding-top: 10px;
+      }
+      p{
+        width: 500px;
+        padding: 10px 0;
+      }
+    }
+  }
+}

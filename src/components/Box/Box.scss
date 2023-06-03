@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+.container-box {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $container-padding;
+  color: $color-main-bg;
+  box-sizing: border-box;
+  position: relative;
+
+  .info-box__title {
+    color: $color-highlights;
+    font-size: 25px;
+    padding-bottom: 40px;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

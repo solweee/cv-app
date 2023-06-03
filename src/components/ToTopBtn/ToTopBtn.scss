@@ -1,0 +1,9 @@
+.to-top {
+  transition: 0.5s;
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  .nav-button {
+    transform: rotate(-90deg);
+  }
+}

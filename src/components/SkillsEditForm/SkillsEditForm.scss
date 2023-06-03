@@ -1,0 +1,52 @@
+@import "../../assets/styles/variables";
+
+.edit-form {
+  form {
+    border: 1px solid $color-highlights;
+    border-radius: 5px;
+    padding: 20px 15px;
+    margin-bottom: 40px;
+    div {
+      label {
+        min-width: 90px;
+        display: inline-block;
+      }
+      input {
+        padding: 10px;
+        width: 270px;
+        border-radius: 5px;
+        border: 1px solid $color-navbars;
+        font: $general-font;
+        font-size: 12px;
+        line-height: 120%;
+
+        &.error {
+          border-color: red;
+          color: red;
+        }
+        &::placeholder {
+          color: $color-navbars;
+        }
+      }
+      .input-feedback {
+        color: red;
+        height: 20px;
+        font-size: 12px;
+      }
+    }
+
+    .button {
+      position: static;
+      margin-top: 10px;
+      span {
+        padding: 0;
+      }
+
+      &:disabled,
+      &[disabled] {
+        background: $color-navbars;
+        color: $color-main-bg;
+      }
+    }
+  }
+}
