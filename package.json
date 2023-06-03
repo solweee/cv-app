@@ -2,6 +2,7 @@
   "name": "cv-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://solweee-cv-app.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,6 +53,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "font-awesome": "^4.7.0",
     "formik": "^2.2.9",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "isotope-layout": "^3.0.6",
     "msw": "^1.2.1",
